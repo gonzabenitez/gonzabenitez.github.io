@@ -1,0 +1,128 @@
+[
+  {
+    "id": "c41e60ec-dd9b-4685-9ea0-5b8a04f56904",
+    "title": "Github Page (This site)",
+    "thumbnailUrl": "portfolio/thumb.png",
+    "briefDescription": "A neat way to showcase some of my projects",
+    "fullDescription": "What started as a bunch of hardcoded basic colors, and element positional experiments under plain HTML, was left on the shelve for more than 3 years today becomes an amazing piece of my porfolio. ",
+    "highlighted": true,
+    "started": "2022-05-18T00:00:00.000Z",
+    "lastUpdated": "2025-05-20T23:22:05.408Z",
+    "status": "active",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Angular",
+      "Typescript"
+    ],
+    "screenshots": [
+      "portfolio/screenshot01.png",
+      "portfolio/screenshot02.png",
+      "portfolio/screenshot03.png",
+      "portfolio/screenshot04.png",
+      "portfolio/screenshot05.png"
+    ],
+    "demoUrl": "https://gonzabenitez.github.io",
+    "githubUrl": "https://github.com/gonzabenitez/gonzabenitez.github.io",
+    "featuredImageUrl": "",
+    "order": 0,
+    "difficulty": "intermediate",
+    "type": "Single page application",
+    "contributionType": "Main developer, PM"
+  },
+  {
+    "id": "93432446-2edb-40b0-aaa2-30aa40efba86",
+    "title": "Whatsapp Link Generator",
+    "thumbnailUrl": "assets/wapp-link-generator/thumb.png",
+    "briefDescription": "A simple tool to url encode a predefined message on the wa.me link ",
+    "fullDescription": "A simple yet useful tool to generate a link to a whatsapp chat with a given number and predefined message",
+    "highlighted": false,
+    "started": "2025-05-08T00:00:00.000Z",
+    "lastUpdated": "2025-05-07T00:00:00.000Z",
+    "status": "finished",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "screenshots": [
+      "assets/wapp-link-generator/screenshot01.png",
+      "assets/wapp-link-generator/screenshot02.png",
+      "assets/wapp-link-generator/screenshot03.png"
+    ],
+    "demoUrl": "https://gonzabenitez.github.io/wapp-link-generator/",
+    "githubUrl": "https://github.com/gonzabenitez/wapp-link-generator",
+    "featuredImageUrl": "",
+    "order": 3,
+    "difficulty": "intermediate",
+    "type": "Tool",
+    "contributionType": "Main developer, PM"
+  },
+  {
+    "id": "f865baea-ca12-4a17-96c5-8c39b4fd93ca",
+    "title": "Donkan Agencia - Website",
+    "thumbnailUrl": "assets/donkanagencia/thumb.png",
+    "briefDescription": "A pretty website for a Design project",
+    "fullDescription": "A polished and strongly branded website for a digital design project",
+    "highlighted": false,
+    "started": "2023-01-30T20:29:59.408Z",
+    "lastUpdated": "2023-02-28T20:29:59.408Z",
+    "status": "closed",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Bootstrap"
+    ],
+    "screenshots": [
+      "assets/donkanagencia/screenshot01.png",
+      "assets/donkanagencia/screenshot02.png",
+      "assets/donkanagencia/screenshot03.png",
+      "assets/donkanagencia/screenshot04.png",
+      "assets/donkanagencia/screenshot05.png"
+    ],
+    "demoUrl": "https://gonzabenitez.github.io/donkanagencia/",
+    "githubUrl": "https://github.com/donkanagencia/donkanagencia.github.io",
+    "featuredImageUrl": "",
+    "order": 0,
+    "difficulty": "intermediate",
+    "type": "Website",
+    "contributionType": "Main developer, CTO"
+  },
+  {
+    "id": "9ed19449-c3fe-43f8-8bdd-2d6013ebe531",
+    "title": "Agendate V1",
+    "thumbnailUrl": "assets/agendate-v1/thumb.png",
+    "briefDescription": "The version 1 of this Saas scheduling system's frontend.",
+    "fullDescription": "This SaaS platform provided business owners a simple way to create and customize their personal schedule and share it with their customers. The target business where Hairdressers, Barbers, Doctors, Therapists and many more. Was built on a MEAN stack (MongoDB, Express, Angular, NodeJS)",
+    "highlighted": true,
+    "started": "2023-03-01T20:56:39.862Z",
+    "lastUpdated": "2023-07-23T20:56:39.862Z",
+    "status": "onHalt",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Sass",
+      "Javascript",
+      "Typescript",
+      "Angular",
+      "NodeJS",
+      "MongoDB"
+    ],
+    "screenshots": [
+      "assets/agendate-v1/screenshot01.png",
+      "assets/agendate-v1/screenshot02.png",
+      "assets/agendate-v1/screenshot03.png",
+      "assets/agendate-v1/screenshot04.png",
+      "assets/agendate-v1/screenshot05.png"
+    ],
+    "demoUrl": "https://gonzabenitez.github.io/agendate-v1",
+    "githubUrl": "https://github.com/donkanagencia/agendate-click",
+    "featuredImageUrl": "",
+    "order": 0,
+    "difficulty": "intermediate",
+    "type": "Saas platform",
+    "contributionType": "CTO, Main developer, PM"
+  }
+]
