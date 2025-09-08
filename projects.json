@@ -1,8 +1,8 @@
 [
   {
-    "id": "2ba65e61-aa58-4399-959a-0e7325311a6f",
+    "id": "15d83fb6-199d-4c86-9d81-7b101ee6e92c",
     "title": "Agendate V1",
-    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/agendate-v1/screenshot01.png",
+    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/agendate-v1/thumb.png",
     "briefDescription": "Front end para sistema de agendas web",
     "fullDescription": "Front end para sistema de agendas web",
     "highlighted": false,
@@ -29,9 +29,9 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "1a4c3b71-91d0-4607-9695-d4bfe5b4387e",
+    "id": "8f4cb5e5-16bf-4af9-a6f4-d485587f8545",
     "title": "Donkanagencia",
-    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/donkanagencia/screenshot01.png",
+    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/donkanagencia/thumb.png",
     "briefDescription": "A way to showcase this site after the project was shut down",
     "fullDescription": "A way to showcase this site after the project was shut down",
     "highlighted": false,
@@ -56,14 +56,14 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "25ac4369-1d78-426b-bd64-ae01550314a8",
+    "id": "47175c75-6eb0-4179-a5c7-4fddbcb5279b",
     "title": "Gonzabenitez.Github.Io",
-    "thumbnailUrl": "assets/gonzabenitez.github.io/thumb.png",
+    "thumbnailUrl": "assets/thumb.png",
     "briefDescription": "This is my main page! ",
     "fullDescription": "This is my main page! ",
     "highlighted": false,
     "started": "2022-03-24T23:32:37+00:00",
-    "lastUpdated": "2025-09-08T16:09:16+00:00",
+    "lastUpdated": "2025-09-08T16:22:12+00:00",
     "status": "finished",
     "technologies": [
       "HTML"
@@ -78,11 +78,11 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "91e95229-24ca-40b9-80b7-656e14d47f8b",
+    "id": "35f612f3-7735-47dc-a841-49b3af8b736d",
     "title": "Hid Macro",
-    "thumbnailUrl": "assets/hid-macro/thumb.png",
+    "thumbnailUrl": "assets/thumb.png",
     "briefDescription": "A python based cli utility to record and replay user HID actions",
-    "fullDescription": "# HID Macro Recorder \ud83c\udfa5\ud83d\uddb1\ufe0f\u2328\ufe0f\r\n\r\nRecord and replay mouse and keyboard actions on Windows.\r\n\r\n## \ud83d\udd27 Features\r\n\r\n- Start/stop recording with `F9/F10`\r\n- Replay once with `F11`\r\n- Loop random routines forever with `F12`\r\n- Stop playback with `ESC`\r\n- Delete last recorded routine with `F6`\r\n- Clear memory routine with `F8`\r\n- Exit with `F7`\r\n\r\n## \ud83d\ude80 Installation\r\n\r\n```bash\r\npip install hid-macro\r\n```\r\n\r\n## \u2328\ufe0f Hotkeys\r\n\r\n| Key     | Action                      |\r\n|--------|-----------------------------|\r\n| F9     | Start recording             |\r\n| F10    | Stop recording & save       |\r\n| F11    | Replay first routine        |\r\n| F12    | Loop through random routines|\r\n| F6     | Delete last saved routine   |\r\n| F8     | Clear current memory routine|\r\n| F7     | Quit                        |\r\n| ESC    | Stop replay                 |\r\n\r\n## \ud83d\udce6 Usage\r\n\r\nAfter install, launch it with:\r\n```bash\r\nhid-macro\r\n```\r\nOr run from source:\r\n```bash\r\npython -m hid_macro.main\r\n```\r\n\r\n## \ud83d\udcc1 Routines\r\nAll routines are saved as .json files in the routines/ folder relative to the installed package.\r\n\r\n## \ud83d\udee0 Dependencies\r\npyautogui\r\n\r\npynput\r\n\r\n---\r\n \r\nMade with \u2764\ufe0f for power users and tinkerers.",
+    "fullDescription": "# HID Macro Recorder \\ud83c\\udfa5\\ud83d\\uddb1\\ufe0f\\u2328\\ufe0f\\r\\n\\r\\nRecord and replay mouse and keyboard actions on Windows.\\r\\n\\r\\n## \\ud83d\\udd27 Features\\r\\n\\r\\n- Start/stop recording with `F9/F10`\\r\\n- Replay once with `F11`\\r\\n- Loop random routines forever with `F12`\\r\\n- Stop playback with `ESC`\\r\\n- Delete last recorded routine with `F6`\\r\\n- Clear memory routine with `F8`\\r\\n- Exit with `F7`\\r\\n\\r\\n## \\ud83d\\ude80 Installation\\r\\n\\r\\n```bash\\r\\npip install hid-macro\\r\\n```\\r\\n\\r\\n## \\u2328\\ufe0f Hotkeys\\r\\n\\r\\n| Key     | Action                      |\\r\\n|--------|-----------------------------|\\r\\n| F9     | Start recording             |\\r\\n| F10    | Stop recording & save       |\\r\\n| F11    | Replay first routine        |\\r\\n| F12    | Loop through random routines|\\r\\n| F6     | Delete last saved routine   |\\r\\n| F8     | Clear current memory routine|\\r\\n| F7     | Quit                        |\\r\\n| ESC    | Stop replay                 |\\r\\n\\r\\n## \\ud83d\\udce6 Usage\\r\\n\\r\\nAfter install, launch it with:\\r\\n```bash\\r\\nhid-macro\\r\\n```\\r\\nOr run from source:\\r\\n```bash\\r\\npython -m hid_macro.main\\r\\n```\\r\\n\\r\\n## \\ud83d\\udcc1 Routines\\r\\nAll routines are saved as .json files in the routines/ folder relative to the installed package.\\r\\n\\r\\n## \\ud83d\\udee0 Dependencies\\r\\npyautogui\\r\\n\\r\\npynput\\r\\n\\r\\n---\\r\\n \\r\\nMade with \\u2764\\ufe0f for power users and tinkerers.",
     "highlighted": false,
     "started": "2025-05-26T19:33:43+00:00",
     "lastUpdated": "2025-06-05T11:58:27+00:00",
@@ -98,9 +98,9 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "a19be3e8-41c3-4668-90d9-d5cc71032419",
+    "id": "1a4b904b-df4e-4487-ba76-e02647a31c1a",
     "title": "Wapp Link Generator",
-    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/wapp-link-generator/screenshot01.png",
+    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/wapp-link-generator/thumb.png",
     "briefDescription": "A free and easy to use whatsapp link generator with optional text",
     "fullDescription": "A free and easy to use whatsapp link generator with optional text",
     "highlighted": false,
