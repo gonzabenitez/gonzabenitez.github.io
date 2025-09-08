@@ -1,6 +1,6 @@
 [
   {
-    "id": "4e4e5cc7-4afb-41e0-95ba-a78cf235c9fb",
+    "id": "8f343007-928d-4fd4-bbf1-40cb49efdd8d",
     "title": "Agendate V1",
     "thumbnailUrl": "assets/agendate-v1/thumb.png",
     "briefDescription": "Front end para sistema de agendas web",
@@ -12,11 +12,7 @@
     "technologies": [
       "JavaScript"
     ],
-    "screenshots": [
-      "assets/agendate-v1/screenshot01.png",
-      "assets/agendate-v1/screenshot02.png",
-      "assets/agendate-v1/screenshot03.png"
-    ],
+    "screenshots": [],
     "demoUrl": "",
     "githubUrl": "https://github.com/gonzabenitez/agendate-v1",
     "featuredImageUrl": "",
@@ -26,7 +22,7 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "f97917a3-8b1c-4871-8d42-e925bcacc9cb",
+    "id": "b75f2ee4-14dc-4921-aac1-9c5c87501f3f",
     "title": "Donkanagencia",
     "thumbnailUrl": "assets/donkanagencia/thumb.png",
     "briefDescription": "A way to showcase this site after the project was shut down",
@@ -36,11 +32,7 @@
     "lastUpdated": "2025-05-21T20:18:47+00:00",
     "status": "finished",
     "technologies": [],
-    "screenshots": [
-      "assets/donkanagencia/screenshot01.png",
-      "assets/donkanagencia/screenshot02.png",
-      "assets/donkanagencia/screenshot03.png"
-    ],
+    "screenshots": [],
     "demoUrl": "",
     "githubUrl": "https://github.com/gonzabenitez/donkanagencia",
     "featuredImageUrl": "",
@@ -50,23 +42,19 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "96170d4e-4fdf-4a9f-b2b5-28e65b082962",
+    "id": "25bd4e5e-3690-4f68-b1ab-7c19e9c2c99d",
     "title": "Gonzabenitez.Github.Io",
     "thumbnailUrl": "assets/gonzabenitez.github.io/thumb.png",
     "briefDescription": "This is my main page! ",
     "fullDescription": "This is my main page! ",
     "highlighted": false,
     "started": "2022-03-24T23:32:37+00:00",
-    "lastUpdated": "2025-09-08T02:44:35+00:00",
+    "lastUpdated": "2025-09-08T15:07:25+00:00",
     "status": "finished",
     "technologies": [
       "HTML"
     ],
-    "screenshots": [
-      "assets/gonzabenitez.github.io/screenshot01.png",
-      "assets/gonzabenitez.github.io/screenshot02.png",
-      "assets/gonzabenitez.github.io/screenshot03.png"
-    ],
+    "screenshots": [],
     "demoUrl": "",
     "githubUrl": "https://github.com/gonzabenitez/gonzabenitez.github.io",
     "featuredImageUrl": "",
@@ -76,21 +64,17 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "bf947b2c-f0b3-48bb-b26a-38d8fdc99ca6",
+    "id": "c4692779-72b2-4f43-9724-d967d20e05d9",
     "title": "Hid Macro",
     "thumbnailUrl": "assets/hid-macro/thumb.png",
     "briefDescription": "A python based cli utility to record and replay user HID actions",
-    "fullDescription": "A python based cli utility to record and replay user HID actions",
+    "fullDescription": "# HID Macro Recorder \ud83c\udfa5\ud83d\uddb1\ufe0f\u2328\ufe0f\r\n\r\nRecord and replay mouse and keyboard actions on Windows.\r\n\r\n## \ud83d\udd27 Features\r\n\r\n- Start/stop recording with `F9/F10`\r\n- Replay once with `F11`\r\n- Loop random routines forever with `F12`\r\n- Stop playback with `ESC`\r\n- Delete last recorded routine with `F6`\r\n- Clear memory routine with `F8`\r\n- Exit with `F7`\r\n\r\n## \ud83d\ude80 Installation\r\n\r\n```bash\r\npip install hid-macro\r\n```\r\n\r\n## \u2328\ufe0f Hotkeys\r\n\r\n| Key     | Action                      |\r\n|--------|-----------------------------|\r\n| F9     | Start recording             |\r\n| F10    | Stop recording & save       |\r\n| F11    | Replay first routine        |\r\n| F12    | Loop through random routines|\r\n| F6     | Delete last saved routine   |\r\n| F8     | Clear current memory routine|\r\n| F7     | Quit                        |\r\n| ESC    | Stop replay                 |\r\n\r\n## \ud83d\udce6 Usage\r\n\r\nAfter install, launch it with:\r\n```bash\r\nhid-macro\r\n```\r\nOr run from source:\r\n```bash\r\npython -m hid_macro.main\r\n```\r\n\r\n## \ud83d\udcc1 Routines\r\nAll routines are saved as .json files in the routines/ folder relative to the installed package.\r\n\r\n## \ud83d\udee0 Dependencies\r\npyautogui\r\n\r\npynput\r\n\r\n---\r\n \r\nMade with \u2764\ufe0f for power users and tinkerers.",
     "highlighted": false,
     "started": "2025-05-26T19:33:43+00:00",
     "lastUpdated": "2025-06-05T11:58:27+00:00",
     "status": "finished",
     "technologies": [],
-    "screenshots": [
-      "assets/hid-macro/screenshot01.png",
-      "assets/hid-macro/screenshot02.png",
-      "assets/hid-macro/screenshot03.png"
-    ],
+    "screenshots": [],
     "demoUrl": "",
     "githubUrl": "https://github.com/gonzabenitez/hid-macro",
     "featuredImageUrl": "",
@@ -100,7 +84,7 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "e6023481-c145-44c4-a681-00a4dc86c6e1",
+    "id": "4090546c-493c-49c1-8414-c9931d427e1e",
     "title": "Wapp Link Generator",
     "thumbnailUrl": "assets/wapp-link-generator/thumb.png",
     "briefDescription": "A free and easy to use whatsapp link generator with optional text",
@@ -112,11 +96,7 @@
     "technologies": [
       "HTML"
     ],
-    "screenshots": [
-      "assets/wapp-link-generator/screenshot01.png",
-      "assets/wapp-link-generator/screenshot02.png",
-      "assets/wapp-link-generator/screenshot03.png"
-    ],
+    "screenshots": [],
     "demoUrl": "",
     "githubUrl": "https://github.com/gonzabenitez/wapp-link-generator",
     "featuredImageUrl": "",
