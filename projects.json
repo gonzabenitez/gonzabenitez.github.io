@@ -1,142 +1,13 @@
-<<<<<<< HEAD
 [
   {
-    "id": "b6493bf5-9816-4c2e-8827-dd7557e559d8",
-    "title": "Agendate V1",
-    "thumbnailUrl": "assets/agendate-v1/thumb.png",
-    "briefDescription": "Front end para sistema de agendas web",
-    "fullDescription": "Front end para sistema de agendas web",
-    "highlighted": false,
-    "started": "2025-05-21T20:55:40Z",
-    "lastUpdated": "2025-05-21T21:50:40Z",
-    "status": "finished",
-    "technologies": [
-      "JavaScript"
-    ],
-    "screenshots": [
-      "assets/agendate-v1/screenshot01.png",
-      "assets/agendate-v1/screenshot02.png",
-      "assets/agendate-v1/screenshot03.png"
-    ],
-    "demoUrl": "",
-    "githubUrl": "https://github.com/gonzabenitez/agendate-v1",
-    "featuredImageUrl": "",
-    "order": 0,
-    "difficulty": "intermediate",
-    "type": "Tool",
-    "contributionType": "Main developer, PM"
-  },
-  {
-    "id": "4bcb3a8b-19af-44f9-8fd5-08561f8c498c",
-    "title": "Donkanagencia",
-    "thumbnailUrl": "assets/donkanagencia/thumb.png",
-    "briefDescription": "A way to showcase this site after the project was shut down",
-    "fullDescription": "A way to showcase this site after the project was shut down",
-    "highlighted": false,
-    "started": "2025-05-21T20:18:47Z",
-    "lastUpdated": "2025-05-21T20:18:47Z",
-    "status": "finished",
-    "technologies": [],
-    "screenshots": [
-      "assets/donkanagencia/screenshot01.png",
-      "assets/donkanagencia/screenshot02.png",
-      "assets/donkanagencia/screenshot03.png"
-    ],
-    "demoUrl": "",
-    "githubUrl": "https://github.com/gonzabenitez/donkanagencia",
-    "featuredImageUrl": "",
-    "order": 0,
-    "difficulty": "intermediate",
-    "type": "Tool",
-    "contributionType": "Main developer, PM"
-  },
-  {
-    "id": "f6b5c11a-7f7a-43ab-a3e4-35fbc630050c",
-    "title": "Gonzabenitez.Github.Io",
-    "thumbnailUrl": "assets/gonzabenitez.github.io/thumb.png",
-    "briefDescription": "This is my main page! ",
-    "fullDescription": "This is my main page! ",
-    "highlighted": false,
-    "started": "2022-03-24T23:32:37Z",
-    "lastUpdated": "2025-09-07T00:20:10Z",
-    "status": "finished",
-    "technologies": [
-      "HTML"
-    ],
-    "screenshots": [
-      "assets/gonzabenitez.github.io/screenshot01.png",
-      "assets/gonzabenitez.github.io/screenshot02.png",
-      "assets/gonzabenitez.github.io/screenshot03.png"
-    ],
-    "demoUrl": "",
-    "githubUrl": "https://github.com/gonzabenitez/gonzabenitez.github.io",
-    "featuredImageUrl": "",
-    "order": 0,
-    "difficulty": "intermediate",
-    "type": "Tool",
-    "contributionType": "Main developer, PM"
-  },
-  {
-    "id": "deb356c2-40da-4630-88b0-1eba41e0c263",
-    "title": "Hid Macro",
-    "thumbnailUrl": "assets/hid-macro/thumb.png",
-    "briefDescription": "A python based cli utility to record and replay user HID actions",
-    "fullDescription": "A python based cli utility to record and replay user HID actions",
-    "highlighted": false,
-    "started": "2025-05-26T19:33:43Z",
-    "lastUpdated": "2025-06-05T11:58:27Z",
-    "status": "finished",
-    "technologies": [],
-    "screenshots": [
-      "assets/hid-macro/screenshot01.png",
-      "assets/hid-macro/screenshot02.png",
-      "assets/hid-macro/screenshot03.png"
-    ],
-    "demoUrl": "",
-    "githubUrl": "https://github.com/gonzabenitez/hid-macro",
-    "featuredImageUrl": "",
-    "order": 0,
-    "difficulty": "intermediate",
-    "type": "Tool",
-    "contributionType": "Main developer, PM"
-  },
-  {
-    "id": "12f9c8bb-5855-4a29-8c3a-21efb9bad14b",
-    "title": "Wapp Link Generator",
-    "thumbnailUrl": "assets/wapp-link-generator/thumb.png",
-    "briefDescription": "A free and easy to use whatsapp link generator with optional text",
-    "fullDescription": "A free and easy to use whatsapp link generator with optional text",
-    "highlighted": false,
-    "started": "2025-05-05T14:49:43Z",
-    "lastUpdated": "2025-05-05T14:53:51Z",
-    "status": "finished",
-    "technologies": [
-      "HTML"
-    ],
-    "screenshots": [
-      "assets/wapp-link-generator/screenshot01.png",
-      "assets/wapp-link-generator/screenshot02.png",
-      "assets/wapp-link-generator/screenshot03.png"
-    ],
-    "demoUrl": "",
-    "githubUrl": "https://github.com/gonzabenitez/wapp-link-generator",
-    "featuredImageUrl": "",
-    "order": 0,
-    "difficulty": "intermediate",
-    "type": "Tool",
-    "contributionType": "Main developer, PM"
-  }
-=======
-[
-  {
-    "id": "afcab4f1-7231-4bd7-8a93-d6e371075902",
+    "id": "94c79a8d-417f-4fb6-bd3a-6265015ea1fb",
     "title": "Agendate V1",
     "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/agendate-v1/thumb.png",
     "briefDescription": "Front end para sistema de agendas web",
     "fullDescription": "Front end para sistema de agendas web",
     "highlighted": false,
     "started": "2025-05-21T20:55:40+00:00",
-    "lastUpdated": "2025-05-21T21:50:40+00:00",
+    "lastUpdated": "2025-09-08T17:15:35+00:00",
     "status": "finished",
     "technologies": [
       "JavaScript"
@@ -149,7 +20,7 @@
       "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/agendate-v1/screenshot05.png",
       "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/agendate-v1/thumb.png"
     ],
-    "demoUrl": "",
+    "demoUrl": "https://gonzabenitez.github.io/agendate-v1/",
     "githubUrl": "https://github.com/gonzabenitez/agendate-v1",
     "featuredImageUrl": "",
     "order": 0,
@@ -158,14 +29,14 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "bb69f3d0-17e0-40ad-b6c0-9d1ee179602e",
+    "id": "5689e0cc-1e8f-4c7f-9fc0-a12e3dfd1054",
     "title": "Donkanagencia",
     "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/donkanagencia/thumb.png",
     "briefDescription": "A way to showcase this site after the project was shut down",
     "fullDescription": "A way to showcase this site after the project was shut down",
     "highlighted": false,
     "started": "2025-05-21T20:18:47+00:00",
-    "lastUpdated": "2025-05-21T20:18:47+00:00",
+    "lastUpdated": "2025-09-08T17:14:06+00:00",
     "status": "finished",
     "technologies": [],
     "screenshots": [
@@ -176,7 +47,7 @@
       "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/donkanagencia/screenshot05.png",
       "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/donkanagencia/thumb.png"
     ],
-    "demoUrl": "",
+    "demoUrl": "https://gonzabenitez.github.io/donkanagencia/",
     "githubUrl": "https://github.com/gonzabenitez/donkanagencia",
     "featuredImageUrl": "",
     "order": 0,
@@ -185,20 +56,28 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "dc36ca76-97b3-408e-a078-99c021d2f78c",
+    "id": "2faf0fe9-9dc9-4ff2-ad0f-4626baa33f55",
     "title": "Gonzabenitez.Github.Io",
-    "thumbnailUrl": "assets/thumb.png",
+    "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/thumb.png",
     "briefDescription": "This is my main page! ",
     "fullDescription": "This is my main page! ",
     "highlighted": false,
     "started": "2022-03-24T23:32:37+00:00",
-    "lastUpdated": "2025-09-08T16:58:52+00:00",
+    "lastUpdated": "2025-09-08T17:26:15+00:00",
     "status": "finished",
     "technologies": [
       "HTML"
     ],
-    "screenshots": [],
-    "demoUrl": "",
+    "screenshots": [
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/screenshot00.png",
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/screenshot01.png",
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/screenshot02.png",
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/screenshot03.png",
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/screenshot04.png",
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/screenshot05.png",
+      "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/gonzabenitez.github.io/thumb.png"
+    ],
+    "demoUrl": "https://gonzabenitez.github.io/",
     "githubUrl": "https://github.com/gonzabenitez/gonzabenitez.github.io",
     "featuredImageUrl": "",
     "order": 0,
@@ -207,7 +86,7 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "571f8976-8693-4c6b-ab79-ae881ab93319",
+    "id": "405a8eb3-f507-4e45-9215-ad047289eace",
     "title": "Hid Macro",
     "thumbnailUrl": "assets/thumb.png",
     "briefDescription": "A python based cli utility to record and replay user HID actions",
@@ -227,7 +106,7 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "69b100b0-b57e-4292-a1d4-6619c98ba195",
+    "id": "b46a7887-b75b-472e-95b8-1b4cf68418bd",
     "title": "Wapp Link Generator",
     "thumbnailUrl": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/master/assets/wapp-link-generator/thumb.png",
     "briefDescription": "A free and easy to use whatsapp link generator with optional text",
@@ -253,5 +132,4 @@
     "type": "Tool",
     "contributionType": "Main developer, PM"
   }
->>>>>>> d001e49dd4b17592300c16fbc3f6cad9b07c78d6
 ]
