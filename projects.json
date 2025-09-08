@@ -1,13 +1,13 @@
 [
   {
-    "id": "288fee75-562b-4ead-bd17-2d2c7b583bfe",
+    "id": "db091639-9d0b-4e9f-970f-e22228055fb3",
     "title": "Agendate V1",
     "thumbnailUrl": "assets/agendate-v1/thumb.png",
     "briefDescription": "Front end para sistema de agendas web",
     "fullDescription": "Front end para sistema de agendas web",
     "highlighted": false,
-    "started": "2025-05-21T20:55:40Z",
-    "lastUpdated": "2025-05-21T21:50:40Z",
+    "started": "2025-05-21T20:55:40+00:00",
+    "lastUpdated": "2025-05-21T21:50:40+00:00",
     "status": "finished",
     "technologies": [
       "JavaScript"
@@ -26,14 +26,14 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "5b0aaeb3-f3e3-4bbd-86b4-500a00ddccab",
+    "id": "09b79f83-5177-42d2-a6d1-ee020825af46",
     "title": "Donkanagencia",
     "thumbnailUrl": "assets/donkanagencia/thumb.png",
     "briefDescription": "A way to showcase this site after the project was shut down",
     "fullDescription": "A way to showcase this site after the project was shut down",
     "highlighted": false,
-    "started": "2025-05-21T20:18:47Z",
-    "lastUpdated": "2025-05-21T20:18:47Z",
+    "started": "2025-05-21T20:18:47+00:00",
+    "lastUpdated": "2025-05-21T20:18:47+00:00",
     "status": "finished",
     "technologies": [],
     "screenshots": [
@@ -50,14 +50,14 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "aca2e8c5-02d8-4ae0-8a04-0da697aa1a26",
+    "id": "df57dc0e-b87c-475f-a1bf-9c51cada231f",
     "title": "Gonzabenitez.Github.Io",
     "thumbnailUrl": "assets/gonzabenitez.github.io/thumb.png",
     "briefDescription": "This is my main page! ",
     "fullDescription": "This is my main page! ",
     "highlighted": false,
-    "started": "2022-03-24T23:32:37Z",
-    "lastUpdated": "2025-09-07T00:05:46Z",
+    "started": "2022-03-24T23:32:37+00:00",
+    "lastUpdated": "2025-09-07T00:20:10+00:00",
     "status": "finished",
     "technologies": [
       "HTML"
@@ -76,14 +76,14 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "95ce5f26-bc07-4625-9960-c60b38e752e9",
+    "id": "2b3e7fca-06bc-4cd8-af79-8899cf071dfe",
     "title": "Hid Macro",
     "thumbnailUrl": "assets/hid-macro/thumb.png",
     "briefDescription": "A python based cli utility to record and replay user HID actions",
     "fullDescription": "A python based cli utility to record and replay user HID actions",
     "highlighted": false,
-    "started": "2025-05-26T19:33:43Z",
-    "lastUpdated": "2025-06-05T11:58:27Z",
+    "started": "2025-05-26T19:33:43+00:00",
+    "lastUpdated": "2025-06-05T11:58:27+00:00",
     "status": "finished",
     "technologies": [],
     "screenshots": [
@@ -100,14 +100,14 @@
     "contributionType": "Main developer, PM"
   },
   {
-    "id": "40135cfd-1715-4721-bcd7-c4f1fc3d25fb",
+    "id": "cebe438b-a2f6-4f65-822e-bb536e9d9596",
     "title": "Wapp Link Generator",
     "thumbnailUrl": "assets/wapp-link-generator/thumb.png",
     "briefDescription": "A free and easy to use whatsapp link generator with optional text",
     "fullDescription": "A free and easy to use whatsapp link generator with optional text",
     "highlighted": false,
-    "started": "2025-05-05T14:49:43Z",
-    "lastUpdated": "2025-05-05T14:53:51Z",
+    "started": "2025-05-05T14:49:43+00:00",
+    "lastUpdated": "2025-05-05T14:53:51+00:00",
     "status": "finished",
     "technologies": [
       "HTML"
