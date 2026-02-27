@@ -88,12 +88,27 @@ def main():
         
         demo_url = repo.homepage
         if not demo_url:
-            try: demo_url = repo.get_pages().html_url
-            except: demo_url = ""
+            try:
+                # Tier 2: Official Pages API
+                pages_info = repo.get_pages()
+                demo_url = pages_info.html_url
+                print(f"    ✨ Found via Pages API: {demo_url}")
+            except Exception:
+                # Tier 3: The "CNAME" Fallback (The Source of Truth)
+                try:
+                    cname_file = repo.get_contents("CNAME")
+                    domain = cname_file.decoded_content.decode("utf-8").strip()
+                    demo_url = f"https://{domain}"
+                    print(f"    🔗 Found via CNAME file: {demo_url}")
+                except Exception:
+                    demo_url = "" # Truly no live link found
 
-        if is_stale and demo_url:
+        if is_stale:
             print(f"    🔄 Refreshing thumbnail (Last push: {repo.pushed_at})")
-            api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url"
+            if demo_url:
+                api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url"
+            else:
+                api_url = f"https://api.microlink.io/?url={repo.html_url}&screenshot=true&embed=screenshot.url"
             save_image_locally(repo.name, api_url)
 
         github_projects.append({
