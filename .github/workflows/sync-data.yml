@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/projects.json src/public/assets/
+          git add src/public/data/projects.json src/public/assets/
           # [skip ci] prevents this commit from triggering the build workflow if you want to save runs
           git commit -m "chore: automated data sync [skip ci]" || echo "No changes to sync"
           git push origin master
