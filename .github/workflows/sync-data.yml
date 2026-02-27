@@ -1,0 +1,34 @@
+name: Sync Project Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Midnight daily
+  workflow_dispatch: # Manual trigger button
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        
+      - name: Sync Data and Assets
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Use uv run to execute the script directly
+          uv run scripts/sync-projects.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/projects.json src/public/assets/
+          # [skip ci] prevents this commit from triggering the build workflow if you want to save runs
+          git commit -m "chore: automated data sync [skip ci]" || echo "No changes to sync"
+          git push origin master
