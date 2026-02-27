@@ -90,21 +90,21 @@ return (
         </div>
 
         {/* Responsive Bento Grid */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6">
-          {displayProjects.map((project) => (
-            <div 
-              key={project.id} 
-              onClick={() => setSelectedProject(project)} 
-              className={`cursor-pointer transition-all duration-300 hover:scale-[1.01] ${
-                project.is_featured 
-                  ? 'lg:col-span-3 lg:row-span-2 md:col-span-2' // Desktop: 3/6 (half), Tablet: Full Width
-                  : 'lg:col-span-2 col-span-1'               // Regular cards
-              }`}
-            >
-              <ProjectCard project={project} />
-            </div>
-          ))}
-        </div>
+<div className="grid grid-cols-1 gap-6 md:grid-cols-12 grid-flow-row-dense">
+  {displayProjects.map((project) => (
+    <div 
+      key={project.id} 
+      onClick={() => setSelectedProject(project)} 
+      className={`cursor-pointer transition-all duration-300 hover:scale-[1.01] flex ${
+        project.is_featured 
+          ? 'md:col-span-7 lg:col-span-7' // Featured: ~60-65% width
+          : 'md:col-span-5 lg:col-span-5' // Regular: ~35-40% width
+      }`}
+    >
+      <ProjectCard project={project} />
+    </div>
+  ))}
+</div>
       </section>
 
       <ProjectModal 
