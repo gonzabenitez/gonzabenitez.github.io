@@ -1,5 +1,31 @@
 [
   {
+    "id": "gh-473805429",
+    "title": "Portfolio",
+    "description": "This is my main page! ",
+    "thumbnail": "/assets/gonzabenitez.github.io/thumb.png",
+    "images": [
+      "/assets/gonzabenitez.github.io/screenshot00.png",
+      "/assets/gonzabenitez.github.io/screenshot01.png",
+      "/assets/gonzabenitez.github.io/screenshot02.png",
+      "/assets/gonzabenitez.github.io/screenshot03.png",
+      "/assets/gonzabenitez.github.io/screenshot04.png",
+      "/assets/gonzabenitez.github.io/screenshot05.png",
+      "/assets/gonzabenitez.github.io/thumb.png"
+    ],
+    "url": "https://github.com/gonzabenitez/gonzabenitez.github.io",
+    "demo": "https://gonzabenitez.github.io/",
+    "tags": [
+      "TypeScript",
+      "featured",
+      "portfolio"
+    ],
+    "date": "2022-03-24T23:32:37+00:00",
+    "last_pushed": "2026-02-27T14:14:29+00:00",
+    "source": "github",
+    "is_featured": true
+  },
+  {
     "id": "gh-1167638293",
     "title": "Oldportfolio",
     "description": "The first (Angular-based) version of my automated portfolio frontend ",
@@ -87,11 +113,11 @@
     "url": "https://github.com/gonzabenitez/agendate-v1",
     "demo": "https://gonzabenitez.github.io/agendate-v1/",
     "tags": [
-      "scheduling-application",
       "saas",
       "single-page-applications",
-      "angular",
-      "JavaScript"
+      "scheduling-application",
+      "JavaScript",
+      "angular"
     ],
     "date": "2025-05-21T20:55:40+00:00",
     "last_pushed": "2025-05-21T21:50:37+00:00",
@@ -112,9 +138,9 @@
     "url": "https://github.com/gonzabenitez/wapp-link-generator",
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
-      "whatsapp",
       "generator",
       "link",
+      "whatsapp",
       "HTML"
     ],
     "date": "2025-05-05T14:49:43+00:00",
