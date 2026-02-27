@@ -49,20 +49,18 @@ export default function Home() {
 
 
 
-  // --- MERGED LOGIC: Filter THEN Sort ---
-  const displayProjects = useMemo(() => {
-    // 1. Filter
+const displayProjects = useMemo(() => {
     const filtered = activeTag === 'all' 
       ? projects 
       : projects.filter(p => p.tags.includes(activeTag));
 
-    // 2. Sort by last_pushed (Newest First)
     return [...filtered].sort((a, b) => {
       const dateA = new Date(a.last_pushed || a.date).getTime();
       const dateB = new Date(b.last_pushed || b.date).getTime();
       return dateB - dateA;
     });
-  }, [activeTag]);
+  }, [activeTag, projects]);
+  
   if (loading) return <div className="bg-zinc-950 min-h-screen" />; // Quiet loading state
 
 return (
