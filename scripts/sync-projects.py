@@ -9,24 +9,20 @@
 
 import os
 import json
-import uuid
 import requests
-import base64
 from datetime import datetime
 from github import Github, GithubException
 from dotenv import load_dotenv
 
-
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Next.js serves from 'public', so we save data and assets there
-# This ensures the frontend fetch('/data/projects.json') finds it.
+# Next.js paths
 OUTPUT_DATA_PATH = os.path.join(BASE_DIR, "src", "public", "data", "projects.json")
 LOCAL_ASSET_DIR = os.path.join(BASE_DIR, "src", "public", "assets")
 MANUAL_DATA_PATH = os.path.join(BASE_DIR, "data", "manual-projects.json")
 
-# --- CONFIGURATION ---
+# Config
 GITHUB_PAT = os.getenv("GITHUB_PAT")
 GITHUB_USERNAME = "gonzabenitez"
 PORTFOLIO_REPO_NAME = "gonzabenitez/gonzabenitez.github.io"
@@ -38,40 +34,34 @@ def get_readme_content(repo):
     except:
         return repo.description or ""
 
-def get_assets(portfolio_repo, repo_name):
-    """Returns screenshots, thumbnail URL, and the date the thumbnail was last updated."""
+def get_assets_info(portfolio_repo, repo_name):
+    """Checks the portfolio repo for existing screenshots and thumb timestamp."""
     screenshots = []
-    thumbnail = GENERIC_THUMB
-    thumb_updated_at = None
-    folder = f"assets/{repo_name}"
+    thumb_date = None
+    folder = f"src/public/assets/{repo_name}" # Path inside the repo
 
     try:
         contents = portfolio_repo.get_contents(folder)
         for item in contents:
             if item.type == "file" and item.name.lower().endswith((".png", ".jpg", ".jpeg", ".webp")):
-                screenshots.append(item.download_url)
+                # Use the web-accessible path for the JSON
+                screenshots.append(f"/assets/{repo_name}/{item.name}")
                 if "thumb" in item.name.lower():
-                    thumbnail = item.download_url
-                    # This gets the last commit date for this specific file
                     commits = portfolio_repo.get_commits(path=item.path)
                     if commits.totalCount > 0:
-                        thumb_updated_at = commits[0].commit.committer.date
-
-        if screenshots and thumbnail == GENERIC_THUMB:
-            thumbnail = screenshots[0]
-    except GithubException:
+                        thumb_date = commits[0].commit.committer.date
+    except Exception:
         pass 
     
-    return sorted(screenshots), thumbnail, thumb_updated_at
+    return sorted(screenshots), thumb_date
 
-def update_repo_file(repo_name, image_url):
-    """Saves the image into the Next.js public folder."""
+def save_image_locally(repo_name, image_url):
+    """Physical write to the local filesystem for the GA commit."""
     try:
-        # We use repo_name as the subfolder
         target_dir = os.path.join(LOCAL_ASSET_DIR, repo_name)
         os.makedirs(target_dir, exist_ok=True)
-        
         path = os.path.join(target_dir, "thumb.png")
+        
         img_data = requests.get(image_url).content
         with open(path, "wb") as f:
             f.write(img_data)
@@ -86,39 +76,31 @@ def main():
 
     gh = Github(GITHUB_PAT)
     user = gh.get_user(GITHUB_USERNAME)
-    # Note: We are writing LOCALLY to the filesystem now, 
-    # then GitHub Actions will commit those files for us.
+    portfolio_repo = gh.get_repo(PORTFOLIO_REPO_NAME)
     
     print(f"📡 Fetching repos for {GITHUB_USERNAME}...")
     github_projects = []
     
     for repo in user.get_repos():
+        if repo.name == "gonzabenitez.github.io": continue
         print(f"  > Processing: {repo.name}")
         
-        # --- Demo Discovery Logic ---
+        # 1. Assets and Stale Check
+        screenshots, thumb_date = get_assets_info(portfolio_repo, repo.name)
+        
+        # Determine if we need to refresh based on actual push dates
+        # repo.pushed_at is naive UTC, thumb_date is naive UTC from PyGithub
+        is_stale = not thumb_date or repo.pushed_at > thumb_date
+        
         demo_url = repo.homepage
         if not demo_url:
-            try:
-                demo_url = repo.get_pages().html_url
-            except:
-                try:
-                    cname_file = repo.get_contents("CNAME")
-                    demo_url = f"https://{cname_file.decoded_content.decode('utf-8').strip()}"
-                except:
-                    demo_url = ""
+            try: demo_url = repo.get_pages().html_url
+            except: demo_url = ""
 
-        # Check for existing assets to see if we need a refresh
-        # (Using your existing get_assets logic or a simple local check)
-        asset_path = os.path.join(LOCAL_ASSET_DIR, repo.name, "thumb.png")
-        is_stale = not os.path.exists(asset_path) 
-        
-        # If you want to keep the "pushed_at" check, you'll need thumb_date
-        # For now, let's just make sure the file exists.
-        
         if is_stale and demo_url:
-            print(f"    🔄 Refreshing thumbnail for {repo.name}...")
+            print(f"    🔄 Refreshing thumbnail (Repo updated: {repo.pushed_at})")
             api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url"
-            update_repo_file(repo.name, api_url)
+            save_image_locally(repo.name, api_url)
 
         topics = repo.get_topics()
         github_projects.append({
@@ -126,7 +108,8 @@ def main():
             "title": repo.name.replace("-", " ").replace("_", " ").title(),
             "description": repo.description or "",
             "content": get_readme_content(repo),
-            "thumbnail": f"/assets/{repo.name}/thumb.png", # Relative web path
+            "thumbnail": f"/assets/{repo.name}/thumb.png",
+            "images": screenshots, # RESTORED
             "url": repo.html_url,
             "demo": demo_url,
             "tags": list(set(filter(None, topics + ([repo.language] if repo.language else [])))),
@@ -136,7 +119,7 @@ def main():
             "is_featured": "featured" in topics
         })
 
-    # Merge with manual data
+    # Merge Manual
     manual_projects = []
     if os.path.exists(MANUAL_DATA_PATH):
         with open(MANUAL_DATA_PATH, 'r') as f:
@@ -145,12 +128,11 @@ def main():
     all_projects = manual_projects + github_projects
     all_projects.sort(key=lambda x: x.get('last_pushed', x.get('date', '')), reverse=True)
 
-    # Final Save
     os.makedirs(os.path.dirname(OUTPUT_DATA_PATH), exist_ok=True)
     with open(OUTPUT_DATA_PATH, 'w') as f:
         json.dump(all_projects, f, indent=2)
     
-    print(f"✅ Success! {len(all_projects)} projects synced to {OUTPUT_DATA_PATH}")
+    print(f"✅ Success! {len(all_projects)} projects synced.")
 
 if __name__ == "__main__":
     main()
