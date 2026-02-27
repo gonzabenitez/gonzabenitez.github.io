@@ -70,8 +70,7 @@ def main():
     github_projects = []
     
     for repo in user.get_repos():
-        if repo.name == GITHUB_USERNAME or repo.name == "gonzabenitez.github.io":
-            continue
+    
             
         print(f"  > Processing: {repo.name}")
         
@@ -93,7 +92,7 @@ def main():
 
         github_projects.append({
             "id": f"gh-{repo.id}",
-            "title": repo.name.replace("-", " ").replace("_", " ").title(),
+            "title": "Portfolio" if repo.name == "gonzabenitez.github.io" else repo.name.replace("-", " ").replace("_", " ").title(),
             "description": repo.description or "",
             "thumbnail": f"/assets/{repo.name}/thumb.png",
             "images": screenshots, # Properly populated
