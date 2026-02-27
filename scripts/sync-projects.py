@@ -108,7 +108,7 @@ def main():
             if demo_url:
                 api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url"
             else:
-                api_url = f"https://api.microlink.io/?url={repo.html_url}&screenshot=true&embed=screenshot.url"
+                api_url = f"https://api.microlink.io/?url={repo.html_url}&screenshot=true&embed=screenshot.url&prerender=true"
             save_image_locally(repo.name, api_url)
 
         github_projects.append({
