@@ -10,14 +10,14 @@ export default function ProjectModal({ project, isOpen, onClose }: { project: an
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
+          {/* Backdrop   */}
           <motion.div 
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={onClose}
             className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md"
           />
 
-          {/* Modal Content */}
+          {/* Modal Content   */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function ProjectModal({ project, isOpen, onClose }: { project: an
               <X size={24} />
             </button>
 
-            {/* Header */}
+            {/* Header Section */}
             <header className="mb-8">
               <h2 className="text-3xl font-bold text-white md:text-5xl">{project.title}</h2>
               <div className="mt-4 flex gap-4">
