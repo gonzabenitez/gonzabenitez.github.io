@@ -5,8 +5,6 @@ on:
     branches: [ master ]
     paths:
       - 'src/**'
-      - 'data/projects.json'
-      - 'assets/**'
 
 permissions:
   contents: read
