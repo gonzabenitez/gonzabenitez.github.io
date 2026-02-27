@@ -25,6 +25,12 @@ GITHUB_PAT = os.getenv("GITHUB_PAT")
 GITHUB_USERNAME = "gonzabenitez"
 PORTFOLIO_REPO_NAME = "gonzabenitez/gonzabenitez.github.io"
 
+def get_readme_content(repo):
+    try:
+        return repo.get_readme().decoded_content.decode("utf-8")
+    except:
+        return repo.description or ""
+
 def get_assets_info(portfolio_repo, repo_name):
     """Fetches screenshots and the thumb's last update date from GitHub."""
     screenshots = []
@@ -94,6 +100,7 @@ def main():
             "id": f"gh-{repo.id}",
             "title": "Portfolio" if repo.name == "gonzabenitez.github.io" else repo.name.replace("-", " ").replace("_", " ").title(),
             "description": repo.description or "",
+            "content": get_readme_content(repo),
             "thumbnail": f"/assets/{repo.name}/thumb.png",
             "images": screenshots, # Properly populated
             "url": repo.html_url,
@@ -102,6 +109,7 @@ def main():
             "date": repo.created_at.isoformat(),
             "last_pushed": repo.pushed_at.isoformat(),
             "source": "github",
+            "is_fork": repo.fork,
             "is_featured": "featured" in repo.get_topics()
         })
 
