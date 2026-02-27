@@ -5,6 +5,7 @@ on:
     branches: [ master ]
     paths:
       - 'src/**'
+  workflow_dispatch: # Manual trigger button
 
 permissions:
   contents: read
