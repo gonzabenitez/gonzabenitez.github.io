@@ -16,7 +16,7 @@ from datetime import datetime
 from github import Github, GithubException
 from dotenv import load_dotenv
 
-# --- PATH CONFIGURATION (Must be after imports!) ---
+
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
