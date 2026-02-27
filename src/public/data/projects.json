@@ -17,12 +17,12 @@
     "url": "https://github.com/gonzabenitez/gonzabenitez.github.io",
     "demo": "https://gonzabenitez.github.io/",
     "tags": [
+      "TypeScript",
       "featured",
-      "portfolio",
-      "TypeScript"
+      "portfolio"
     ],
     "date": "2022-03-24T23:32:37+00:00",
-    "last_pushed": "2026-02-27T14:33:15+00:00",
+    "last_pushed": "2026-02-27T15:26:50+00:00",
     "source": "github",
     "is_fork": false,
     "is_featured": true
@@ -63,7 +63,7 @@
       "/assets/manada/thumb.png"
     ],
     "url": "https://github.com/gonzabenitez/manada",
-    "demo": "",
+    "demo": "https://manada.live",
     "tags": [],
     "date": "2026-02-25T16:36:58+00:00",
     "last_pushed": "2026-02-25T16:49:28+00:00",
@@ -81,7 +81,7 @@
       "/assets/tremendo-web/thumb.png"
     ],
     "url": "https://github.com/gonzabenitez/tremendo-web",
-    "demo": "",
+    "demo": "https://tremendo.online",
     "tags": [
       "HTML"
     ],
@@ -124,11 +124,11 @@
     "url": "https://github.com/gonzabenitez/agendate-v1",
     "demo": "https://gonzabenitez.github.io/agendate-v1/",
     "tags": [
-      "angular",
-      "JavaScript",
-      "single-page-applications",
       "saas",
-      "scheduling-application"
+      "angular",
+      "scheduling-application",
+      "single-page-applications",
+      "JavaScript"
     ],
     "date": "2025-05-21T20:55:40+00:00",
     "last_pushed": "2025-05-21T21:50:37+00:00",
@@ -151,10 +151,10 @@
     "url": "https://github.com/gonzabenitez/wapp-link-generator",
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
-      "whatsapp",
       "HTML",
-      "generator",
-      "link"
+      "link",
+      "whatsapp",
+      "generator"
     ],
     "date": "2025-05-05T14:49:43+00:00",
     "last_pushed": "2025-05-05T14:53:49+00:00",
@@ -179,9 +179,9 @@
     "url": "https://github.com/gonzabenitez/donkanagencia",
     "demo": "https://gonzabenitez.github.io/donkanagencia/",
     "tags": [
+      "graphic-design",
       "website",
-      "business",
-      "graphic-design"
+      "business"
     ],
     "date": "2025-05-21T20:18:47+00:00",
     "last_pushed": "2023-02-28T17:50:29+00:00",
