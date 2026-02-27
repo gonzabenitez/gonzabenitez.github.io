@@ -18,11 +18,11 @@
     "demo": "https://gonzabenitez.github.io/",
     "tags": [
       "TypeScript",
-      "featured",
-      "portfolio"
+      "portfolio",
+      "featured"
     ],
     "date": "2022-03-24T23:32:37+00:00",
-    "last_pushed": "2026-02-27T15:26:50+00:00",
+    "last_pushed": "2026-02-27T15:57:44+00:00",
     "source": "github",
     "is_fork": false,
     "is_featured": true
@@ -124,10 +124,10 @@
     "url": "https://github.com/gonzabenitez/agendate-v1",
     "demo": "https://gonzabenitez.github.io/agendate-v1/",
     "tags": [
-      "saas",
-      "angular",
-      "scheduling-application",
       "single-page-applications",
+      "scheduling-application",
+      "angular",
+      "saas",
       "JavaScript"
     ],
     "date": "2025-05-21T20:55:40+00:00",
@@ -151,9 +151,9 @@
     "url": "https://github.com/gonzabenitez/wapp-link-generator",
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
-      "HTML",
-      "link",
       "whatsapp",
+      "link",
+      "HTML",
       "generator"
     ],
     "date": "2025-05-05T14:49:43+00:00",
