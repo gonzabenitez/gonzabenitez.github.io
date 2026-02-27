@@ -96,7 +96,7 @@ const [mounted, setMounted] = useState(false);
         {/* Bottom Metadata */}
         <div className="mt-4 flex items-center justify-between border-t border-white/5 pt-4">
           <div className="flex gap-2">
-            {project.tags.slice(0, 5).map((tag: string) => (
+            {project.tags.slice(0, 2).map((tag: string) => (
               <span key={tag} className="text-[10px] font-mono text-cyan-500/70 lowercase">
                 #{tag}
               </span>
