@@ -17,12 +17,12 @@
     "url": "https://github.com/gonzabenitez/gonzabenitez.github.io",
     "demo": "https://gonzabenitez.github.io/",
     "tags": [
-      "TypeScript",
       "portfolio",
-      "featured"
+      "featured",
+      "TypeScript"
     ],
     "date": "2022-03-24T23:32:37+00:00",
-    "last_pushed": "2026-02-27T15:57:44+00:00",
+    "last_pushed": "2026-02-27T17:42:20+00:00",
     "source": "github",
     "is_fork": false,
     "is_featured": true
@@ -69,7 +69,7 @@
     "last_pushed": "2026-02-25T16:49:28+00:00",
     "source": "github",
     "is_fork": false,
-    "is_featured": true
+    "is_featured": false
   },
   {
     "id": "gh-1060890103",
@@ -89,7 +89,7 @@
     "last_pushed": "2025-09-21T16:12:43+00:00",
     "source": "github",
     "is_fork": false,
-    "is_featured": true
+    "is_featured": false
   },
   {
     "id": "gh-990880311",
@@ -97,7 +97,9 @@
     "description": "A python based cli utility to record and replay user HID actions",
     "content": "# HID Macro Recorder \ud83c\udfa5\ud83d\uddb1\ufe0f\u2328\ufe0f\r\n\r\nRecord and replay mouse and keyboard actions on Windows.\r\n\r\n## \ud83d\udd27 Features\r\n\r\n- Start/stop recording with `F9/F10`\r\n- Replay once with `F11`\r\n- Loop random routines forever with `F12`\r\n- Stop playback with `ESC`\r\n- Delete last recorded routine with `F6`\r\n- Clear memory routine with `F8`\r\n- Exit with `F7`\r\n\r\n## \ud83d\ude80 Installation\r\n\r\n```bash\r\npip install hid-macro\r\n```\r\n\r\n## \u2328\ufe0f Hotkeys\r\n\r\n| Key     | Action                      |\r\n|--------|-----------------------------|\r\n| F9     | Start recording             |\r\n| F10    | Stop recording & save       |\r\n| F11    | Replay first routine        |\r\n| F12    | Loop through random routines|\r\n| F6     | Delete last saved routine   |\r\n| F8     | Clear current memory routine|\r\n| F7     | Quit                        |\r\n| ESC    | Stop replay                 |\r\n\r\n## \ud83d\udce6 Usage\r\n\r\nAfter install, launch it with:\r\n```bash\r\nhid-macro\r\n```\r\nOr run from source:\r\n```bash\r\npython -m hid_macro.main\r\n```\r\n\r\n## \ud83d\udcc1 Routines\r\nAll routines are saved as .json files in the routines/ folder relative to the installed package.\r\n\r\n## \ud83d\udee0 Dependencies\r\npyautogui\r\n\r\npynput\r\n\r\n---\r\n \r\nMade with \u2764\ufe0f for power users and tinkerers.",
     "thumbnail": "/assets/hid-macro/thumb.png",
-    "images": [],
+    "images": [
+      "/assets/hid-macro/thumb.png"
+    ],
     "url": "https://github.com/gonzabenitez/hid-macro",
     "demo": "",
     "tags": [],
@@ -126,15 +128,15 @@
     "tags": [
       "single-page-applications",
       "scheduling-application",
+      "JavaScript",
       "angular",
-      "saas",
-      "JavaScript"
+      "saas"
     ],
     "date": "2025-05-21T20:55:40+00:00",
     "last_pushed": "2025-05-21T21:50:37+00:00",
     "source": "github",
     "is_fork": true,
-    "is_featured": true
+    "is_featured": false
   },
   {
     "id": "gh-978153230",
@@ -151,10 +153,10 @@
     "url": "https://github.com/gonzabenitez/wapp-link-generator",
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
-      "whatsapp",
-      "link",
+      "generator",
       "HTML",
-      "generator"
+      "whatsapp",
+      "link"
     ],
     "date": "2025-05-05T14:49:43+00:00",
     "last_pushed": "2025-05-05T14:53:49+00:00",
@@ -180,8 +182,8 @@
     "demo": "https://gonzabenitez.github.io/donkanagencia/",
     "tags": [
       "graphic-design",
-      "website",
-      "business"
+      "business",
+      "website"
     ],
     "date": "2025-05-21T20:18:47+00:00",
     "last_pushed": "2023-02-28T17:50:29+00:00",
