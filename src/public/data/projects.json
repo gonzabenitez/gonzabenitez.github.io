@@ -4,7 +4,7 @@
     "title": "Portfolio",
     "description": "This is my main page! ",
     "content": "\n---\n\n# \ud83c\udf0c Automated Portfolio Ecosystem\n\n### [gonzabenitez.github.io](https://gonzabenitez.github.io)\n\nThis is not just a portfolio\u2014it's a **self-maintaining data pipeline**. It uses GitHub as a headless CMS, Python as an automated curator, and Next.js as a high-performance presentation layer.\n\n## \ud83d\udee0\ufe0f System Overview\n\nThe ecosystem is divided into three specialized segments that interact via **GitHub Actions**:\n\n### 1. [The Data Engine (`/scripts`)](./scripts/README.md)\n\n* **Role**: Orchestrator & Curator.\n* **Tech**: Python + `uv` + PyGithub.\n* **Function**: Scans my GitHub profile, resolves live demos (Pages/CNAME), and calculates \"staleness\" to decide when to refresh project thumbnails via the Microlink API.\n\n### 2. [The State Layer (`/data` & `/assets`)](./assets/README.md)\n\n* **Role**: Permanent Storage.\n* **Tech**: Flat JSON + Local Image Assets.\n* **Function**: Acts as a local \"database\" to ensure the site remains blazing fast and doesn't hit API rate limits or external dependencies during page loads.\n\n### 3. [The Visual Interface (`/src`)](./src/README.md)\n\n* **Role**: Presentation & UX.\n* **Tech**: Next.js 15 (App Router) + Tailwind CSS + Framer Motion.\n* **Function**: Consumes the local JSON to render a responsive Bento Grid. Features activity-based sorting and a custom Plexus particle background.\n\n---\n\n## \ud83d\udd04 The Interaction Loop\n\n1. **Event**: A nightly cron job or a manual push triggers the `Sync Data` workflow.\n2. **Process**: The Python script updates `projects.json` and downloads new `thumb.png` files to `/assets`.\n3. **Commit**: GitHub Actions commits these changes back to the `master` branch.\n4. **React**: The `Deploy` workflow detects changes in `/data` or `/assets` and triggers a fresh Next.js static export.\n5. **Serve**: The updated site is pushed to GitHub Pages.\n\n---\n\n## \ud83d\ude80 Quick Start for Devs\n\n```bash\n# 1. Clone the stack\ngit clone https://github.com/gonzabenitez/gonzabenitez.github.io.git\n\n# 2. Run the automation (requires GITHUB_PAT)\nuv run scripts/sync-projects.py\n\n# 3. Launch the UI\ncd src\nnpm install && npm run dev\n\n```\n\n---\n\n## \ud83d\udcc8 Key Automation Features\n\n* **Smart Refresh**: Thumbnails are only re-captured if the repository `pushed_at` date is newer than the local asset.\n* **Force-Dark Design**: Hardcoded CSS variables to ensure visual consistency regardless of OS theme settings.\n* **Plexus Network**: A custom `Canvas` implementation in the Hero section symbolizing interconnected automated systems.\n\n---\n",
-    "thumbnail": "/assets/gonzabenitez.github.io/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/gonzabenitez.github.io/thumb.png",
     "images": [
       "/assets/gonzabenitez.github.io/screenshot00.png",
       "/assets/gonzabenitez.github.io/screenshot01.png",
@@ -18,11 +18,11 @@
     "demo": "https://gonzabenitez.github.io/",
     "tags": [
       "featured",
-      "TypeScript",
-      "portfolio"
+      "portfolio",
+      "TypeScript"
     ],
     "date": "2022-03-24T23:32:37+00:00",
-    "last_pushed": "2026-03-02T18:52:02+00:00",
+    "last_pushed": "2026-03-02T19:16:43+00:00",
     "source": "github",
     "is_fork": false,
     "is_featured": true
@@ -32,7 +32,7 @@
     "title": "Manada",
     "description": "The home page for this cretive audiovisuals project",
     "content": "\n# \ud83d\udc3a MANADA | Art & Tech Collective\n\nA high-end, minimalist landing page for an audiovisual production collective. This is a standalone frontend project designed to bridge the gap between local talent and professional visual identity.\n\n## \ud83d\ude80 The Vision\nIn a town of 30,000, the infrastructure for high-end visuals is often missing. MANADA is the signal. This site serves as the \"Bridge\"\u2014a first contact point for artists and businesses.\n\n## \ud83d\udee0\ufe0f Standalone Architecture\nThis repository is a pure static web project. \n- **No Database Needed**: Submissions are handled by Formspark's API.\n- **Persistence**: `localStorage` tracks user status locally (no tracking banners).\n- **Animation**: Native CSS3 and HTML5 Canvas for a lightweight, high-performance atmosphere.\n\n## \ud83d\udcc1 Repository Structure\n```text\n/manada\n\u251c\u2500\u2500 index.html              # Core structure & Manifesto overlay\n\u251c\u2500\u2500 assets/\n\u2502   \u251c\u2500\u2500 img/\n\u2502   \u2502   \u2514\u2500\u2500 logo.png        # The Signal (Ultra-thin border aesthetic)\n\u2502   \u251c\u2500\u2500 styles/\n\u2502   \u2502   \u2514\u2500\u2500 style.css       # Tech-Noir theme & Footer positioning\n\u2502   \u2514\u2500\u2500 scripts/\n\u2502       \u251c\u2500\u2500 fetch.js        # Form logic & JSON AJAX handling\n\u2502       \u2514\u2500\u2500 particles.js    # Background particle engine\n\u2514\u2500\u2500 README.md               # Project documentation\n\n```\n\n## \ud83d\udce1 Submission Logic\n\nThe form uses the **Fetch API** to send data as a JSON payload. This ensures the user stays immersed in the dark-mode experience without white-screen redirects.\n\n```javascript\n// Change this in assets/scripts/fetch.js when going live:\nconst TARGET_URL = \"https://submit-form.com/YOUR_FORMSPARK_ID\";\n\n```\n\n## \ud83d\udd27 Local Testing (Developer Tool)\n\nFor local testing without using Formspark credits, a mock Node.js server is included in the project notes to simulate the API response and verify the AJAX handshake.\n\n## \ud83c\udfa8 Aesthetic Guidelines\n\n* **The Glow**: All interactive elements pulse with `#fd66c2`.\n* **The Particles**: Drift behind the content, suggesting a living network.\n* **The Layout**: A strict 100vh container that keeps the \"Manifesto\" footer pinned to the floor of the screen.\n\n---\n\n**STAY VIVID.**\n",
-    "thumbnail": "/assets/manada/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/manada/thumb.png",
     "images": [
       "/assets/manada/thumb.png"
     ],
@@ -52,7 +52,7 @@
     "title": "Oldportfolio",
     "description": "The first (Angular-based) version of my automated portfolio frontend ",
     "content": "The first (Angular-based) version of my automated portfolio frontend ",
-    "thumbnail": "/assets/oldportfolio/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/oldportfolio/thumb.png",
     "images": [
       "/assets/oldportfolio/screenshot00.png",
       "/assets/oldportfolio/screenshot01.png",
@@ -78,7 +78,7 @@
     "title": "Tremendo Web",
     "description": "A landing page for this automation project",
     "content": "A landing page for this automation project",
-    "thumbnail": "/assets/tremendo-web/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/tremendo-web/thumb.png",
     "images": [
       "/assets/tremendo-web/thumb.png"
     ],
@@ -98,7 +98,7 @@
     "title": "Hid Macro",
     "description": "A python based cli utility to record and replay user HID actions",
     "content": "# HID Macro Recorder \ud83c\udfa5\ud83d\uddb1\ufe0f\u2328\ufe0f\r\n\r\nRecord and replay mouse and keyboard actions on Windows.\r\n\r\n## \ud83d\udd27 Features\r\n\r\n- Start/stop recording with `F9/F10`\r\n- Replay once with `F11`\r\n- Loop random routines forever with `F12`\r\n- Stop playback with `ESC`\r\n- Delete last recorded routine with `F6`\r\n- Clear memory routine with `F8`\r\n- Exit with `F7`\r\n\r\n## \ud83d\ude80 Installation\r\n\r\n```bash\r\npip install hid-macro\r\n```\r\n\r\n## \u2328\ufe0f Hotkeys\r\n\r\n| Key     | Action                      |\r\n|--------|-----------------------------|\r\n| F9     | Start recording             |\r\n| F10    | Stop recording & save       |\r\n| F11    | Replay first routine        |\r\n| F12    | Loop through random routines|\r\n| F6     | Delete last saved routine   |\r\n| F8     | Clear current memory routine|\r\n| F7     | Quit                        |\r\n| ESC    | Stop replay                 |\r\n\r\n## \ud83d\udce6 Usage\r\n\r\nAfter install, launch it with:\r\n```bash\r\nhid-macro\r\n```\r\nOr run from source:\r\n```bash\r\npython -m hid_macro.main\r\n```\r\n\r\n## \ud83d\udcc1 Routines\r\nAll routines are saved as .json files in the routines/ folder relative to the installed package.\r\n\r\n## \ud83d\udee0 Dependencies\r\npyautogui\r\n\r\npynput\r\n\r\n---\r\n \r\nMade with \u2764\ufe0f for power users and tinkerers.",
-    "thumbnail": "/assets/hid-macro/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/hid-macro/thumb.png",
     "images": [
       "/assets/hid-macro/thumb.png"
     ],
@@ -116,7 +116,7 @@
     "title": "Agendate V1",
     "description": "Front end para sistema de agendas web",
     "content": "Front end para sistema de agendas web",
-    "thumbnail": "/assets/agendate-v1/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/agendate-v1/thumb.png",
     "images": [
       "/assets/agendate-v1/screenshot01.png",
       "/assets/agendate-v1/screenshot02.png",
@@ -128,10 +128,10 @@
     "url": "https://github.com/gonzabenitez/agendate-v1",
     "demo": "https://gonzabenitez.github.io/agendate-v1/",
     "tags": [
-      "JavaScript",
       "scheduling-application",
-      "saas",
       "angular",
+      "saas",
+      "JavaScript",
       "single-page-applications"
     ],
     "date": "2025-05-21T20:55:40+00:00",
@@ -145,7 +145,7 @@
     "title": "Wapp Link Generator",
     "description": "A free and easy to use whatsapp link generator with optional text",
     "content": "A free and easy to use whatsapp link generator with optional text",
-    "thumbnail": "/assets/wapp-link-generator/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/wapp-link-generator/thumb.png",
     "images": [
       "/assets/wapp-link-generator/screenshot01.png",
       "/assets/wapp-link-generator/screenshot02.png",
@@ -156,9 +156,9 @@
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
       "HTML",
-      "whatsapp",
+      "link",
       "generator",
-      "link"
+      "whatsapp"
     ],
     "date": "2025-05-05T14:49:43+00:00",
     "last_pushed": "2025-05-05T14:53:49+00:00",
@@ -171,7 +171,7 @@
     "title": "Donkanagencia",
     "description": "A way to showcase this site after the project was shut down",
     "content": "A way to showcase this site after the project was shut down",
-    "thumbnail": "/assets/donkanagencia/thumb.png",
+    "thumbnail": "https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/assets/donkanagencia/thumb.png",
     "images": [
       "/assets/donkanagencia/screenshot01.png",
       "/assets/donkanagencia/screenshot02.png",
@@ -184,8 +184,8 @@
     "demo": "https://gonzabenitez.github.io/donkanagencia/",
     "tags": [
       "graphic-design",
-      "business",
-      "website"
+      "website",
+      "business"
     ],
     "date": "2025-05-21T20:18:47+00:00",
     "last_pushed": "2023-02-28T17:50:29+00:00",
