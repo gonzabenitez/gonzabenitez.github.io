@@ -8,6 +8,30 @@ import remarkGfm from 'remark-gfm';
 export default function ProjectModal({ project, isOpen, onClose }: { project: any, isOpen: boolean, onClose: () => void }) {
   const [activeImage, setActiveImage] = useState(project?.thumbnail);
 
+  useEffect(() => {
+  if (isOpen) {
+    // 1. Push a dummy state so there's something to "go back" from
+    window.history.pushState({ modalOpen: true }, "");
+
+    // 2. Listen for the back button (popstate)
+    const handlePopState = (e: PopStateEvent) => {
+      // If the modal is open, close it and prevent navigation
+      onClose();
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    // 3. Cleanup: If the modal closes normally, remove the listener
+    // and if we still have our dummy state, go back once to clean the history
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      if (window.history.state?.modalOpen) {
+        window.history.back();
+      }
+    };
+  }
+}, [isOpen, onClose]);
+
   // Sync image state when a new project is opened
   useEffect(() => {
     if (project) {
@@ -41,12 +65,15 @@ export default function ProjectModal({ project, isOpen, onClose }: { project: an
             className="fixed inset-x-4 top-[5%] md:top-[7%] z-[60] mx-auto max-w-6xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto lg:overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 shadow-[0_0_50px_-12px_rgba(6,182,212,0.3)]"
           >
             {/* Close Button - Floating & High Contrast */}
-            <button 
-              onClick={onClose} 
-              className="absolute right-6 top-6 z-[70] p-3 rounded-full bg-zinc-900/80 border border-white/10 text-cyan-500 hover:bg-cyan-500 hover:text-black transition-all duration-300 group shadow-xl"
-            >
-              <X size={20} className="group-hover:rotate-90 transition-transform" />
-            </button>
+            {/* STICKY CLOSE BUTTON HEADER */}
+  <div className="sticky top-0 z-50 flex justify-end p-4 bg-zinc-950/80 backdrop-blur-md">
+    <button 
+      onClick={onClose}
+      className="p-2 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors"
+    >
+      <X size={24} />
+    </button>
+  </div>
 
             <div className="flex flex-col lg:flex-row h-full">
               

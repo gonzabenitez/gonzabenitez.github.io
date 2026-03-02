@@ -1,3 +1,5 @@
+import { Github, Linkedin } from 'lucide-react';
+
 export default function Hero() {
   return (
     <section className="relative px-6 pt-20 pb-12 md:pt-40 md:pb-24">
@@ -10,11 +12,41 @@ export default function Hero() {
             Full-stack developer specializing in <span className="text-cyan-400">automation</span>. 
             I build self-maintaining systems and high-end digital experiences.
           </p>
-          <div className="mt-8 flex justify-center md:justify-start">
-             <div className="px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 text-[10px] font-mono tracking-widest">
-               AVAILABLE FOR PROJECTS
-             </div>
-          </div>
+
+
+
+
+<div className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6">
+  {/* The Badge */}
+  <div className="px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 text-[10px] font-mono tracking-widest">
+    AVAILABLE FOR PROJECTS
+  </div>
+
+  {/* The Socials */}
+  <div className="flex items-center gap-5">
+    <a 
+      href="https://github.com/gonzabenitez" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="group flex items-center gap-2 text-zinc-500 hover:text-white transition-all duration-300"
+    >
+      <Github size={18} className="group-hover:scale-110 transition-transform" />
+      <span className="text-[10px] font-mono tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">/github</span>
+    </a>
+
+    <div className="h-4 w-[1px] bg-zinc-800" /> {/* Subtle Divider */}
+
+    <a 
+      href="https://linkedin.com/in/gonza-benitez" // Update this!
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="group flex items-center gap-2 text-zinc-500 hover:text-cyan-400 transition-all duration-300"
+    >
+      <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
+      <span className="text-[10px] font-mono tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">/linkedin</span>
+    </a>
+  </div>
+</div>
         </div>
 
         {/* Adjusted Photo Frame for Mobile */}
