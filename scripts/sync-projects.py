@@ -106,7 +106,7 @@ def main():
         if is_stale:
             print(f"    🔄 Refreshing thumbnail (Last push: {repo.pushed_at})")
             if demo_url:
-                api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url&force=true"
+                api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url&prerender=true&force=true"
             else:
                 api_url = f"https://api.microlink.io/?url={repo.html_url}&screenshot=true&embed=screenshot.url&prerender=true&force=true"
             save_image_locally(repo.name, api_url)
