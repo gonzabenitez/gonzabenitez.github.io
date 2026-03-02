@@ -105,12 +105,13 @@ def main():
 
         if is_stale:
             print(f"    🔄 Refreshing thumbnail (Last push: {repo.pushed_at})")
+            timestamp = datetime.now().timestamp()
             if demo_url:
-                api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url&prerender=true&force=true"
+                api_url = f"https://api.microlink.io/?url={demo_url}&screenshot=true&embed=screenshot.url&prerender=true&cache_buster={timestamp}"
             else:
-                api_url = f"https://api.microlink.io/?url={repo.html_url}&screenshot=true&embed=screenshot.url&prerender=true&force=true"
+                api_url = f"https://api.microlink.io/?url={repo.html_url}&screenshot=true&embed=screenshot.url&prerender=true&cache_buster={timestamp}"
             save_image_locally(repo.name, api_url)
-
+        all_tags = sorted(list(set(filter(None, repo.get_topics() + ([repo.language] if repo.language else [])))))
         github_projects.append({
             "id": f"gh-{repo.id}",
             "title": "Portfolio" if repo.name == "gonzabenitez.github.io" else repo.name.replace("-", " ").replace("_", " ").title(),
@@ -120,7 +121,7 @@ def main():
             "images": screenshots, # Properly populated
             "url": repo.html_url,
             "demo": demo_url,
-            "tags": list(set(filter(None, repo.get_topics() + ([repo.language] if repo.language else [])))),
+            "tags": all_tags,
             "date": repo.created_at.isoformat(),
             "last_pushed": repo.pushed_at.isoformat(),
             "source": "github",
