@@ -35,8 +35,8 @@ export default function Home() {
 
 
   useEffect(() => {
-    // Fetch the JSON as a static asset from your own domain
-    fetch('/data/projects.json')
+    // Fetch the JSON from raw github user content so no rebuild is necessary to get the lastest changes
+    fetch('https://raw.githubusercontent.com/gonzabenitez/gonzabenitez.github.io/refs/heads/master/src/public/data/projects.json')
       .then(res => res.json())
       .then(data => {
         setProjects(data);
