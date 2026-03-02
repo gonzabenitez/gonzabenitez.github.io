@@ -17,15 +17,35 @@
     "url": "https://github.com/gonzabenitez/gonzabenitez.github.io",
     "demo": "https://gonzabenitez.github.io/",
     "tags": [
-      "portfolio",
       "featured",
-      "TypeScript"
+      "TypeScript",
+      "portfolio"
     ],
     "date": "2022-03-24T23:32:37+00:00",
-    "last_pushed": "2026-03-01T02:26:27+00:00",
+    "last_pushed": "2026-03-02T18:52:02+00:00",
     "source": "github",
     "is_fork": false,
     "is_featured": true
+  },
+  {
+    "id": "gh-1166819817",
+    "title": "Manada",
+    "description": "The home page for this cretive audiovisuals project",
+    "content": "\n# \ud83d\udc3a MANADA | Art & Tech Collective\n\nA high-end, minimalist landing page for an audiovisual production collective. This is a standalone frontend project designed to bridge the gap between local talent and professional visual identity.\n\n## \ud83d\ude80 The Vision\nIn a town of 30,000, the infrastructure for high-end visuals is often missing. MANADA is the signal. This site serves as the \"Bridge\"\u2014a first contact point for artists and businesses.\n\n## \ud83d\udee0\ufe0f Standalone Architecture\nThis repository is a pure static web project. \n- **No Database Needed**: Submissions are handled by Formspark's API.\n- **Persistence**: `localStorage` tracks user status locally (no tracking banners).\n- **Animation**: Native CSS3 and HTML5 Canvas for a lightweight, high-performance atmosphere.\n\n## \ud83d\udcc1 Repository Structure\n```text\n/manada\n\u251c\u2500\u2500 index.html              # Core structure & Manifesto overlay\n\u251c\u2500\u2500 assets/\n\u2502   \u251c\u2500\u2500 img/\n\u2502   \u2502   \u2514\u2500\u2500 logo.png        # The Signal (Ultra-thin border aesthetic)\n\u2502   \u251c\u2500\u2500 styles/\n\u2502   \u2502   \u2514\u2500\u2500 style.css       # Tech-Noir theme & Footer positioning\n\u2502   \u2514\u2500\u2500 scripts/\n\u2502       \u251c\u2500\u2500 fetch.js        # Form logic & JSON AJAX handling\n\u2502       \u2514\u2500\u2500 particles.js    # Background particle engine\n\u2514\u2500\u2500 README.md               # Project documentation\n\n```\n\n## \ud83d\udce1 Submission Logic\n\nThe form uses the **Fetch API** to send data as a JSON payload. This ensures the user stays immersed in the dark-mode experience without white-screen redirects.\n\n```javascript\n// Change this in assets/scripts/fetch.js when going live:\nconst TARGET_URL = \"https://submit-form.com/YOUR_FORMSPARK_ID\";\n\n```\n\n## \ud83d\udd27 Local Testing (Developer Tool)\n\nFor local testing without using Formspark credits, a mock Node.js server is included in the project notes to simulate the API response and verify the AJAX handshake.\n\n## \ud83c\udfa8 Aesthetic Guidelines\n\n* **The Glow**: All interactive elements pulse with `#fd66c2`.\n* **The Particles**: Drift behind the content, suggesting a living network.\n* **The Layout**: A strict 100vh container that keeps the \"Manifesto\" footer pinned to the floor of the screen.\n\n---\n\n**STAY VIVID.**\n",
+    "thumbnail": "/assets/manada/thumb.png",
+    "images": [
+      "/assets/manada/thumb.png"
+    ],
+    "url": "https://github.com/gonzabenitez/manada",
+    "demo": "https://manada.live",
+    "tags": [
+      "CSS"
+    ],
+    "date": "2026-02-25T16:36:58+00:00",
+    "last_pushed": "2026-03-02T18:15:05+00:00",
+    "source": "github",
+    "is_fork": false,
+    "is_featured": false
   },
   {
     "id": "gh-1167638293",
@@ -49,24 +69,6 @@
     ],
     "date": "2026-02-26T14:16:06+00:00",
     "last_pushed": "2026-02-28T15:42:24+00:00",
-    "source": "github",
-    "is_fork": false,
-    "is_featured": false
-  },
-  {
-    "id": "gh-1166819817",
-    "title": "Manada",
-    "description": "The home page for this cretive audiovisuals project",
-    "content": "# MANADA\n",
-    "thumbnail": "/assets/manada/thumb.png",
-    "images": [
-      "/assets/manada/thumb.png"
-    ],
-    "url": "https://github.com/gonzabenitez/manada",
-    "demo": "https://manada.live",
-    "tags": [],
-    "date": "2026-02-25T16:36:58+00:00",
-    "last_pushed": "2026-02-25T16:49:28+00:00",
     "source": "github",
     "is_fork": false,
     "is_featured": false
@@ -126,11 +128,11 @@
     "url": "https://github.com/gonzabenitez/agendate-v1",
     "demo": "https://gonzabenitez.github.io/agendate-v1/",
     "tags": [
-      "saas",
-      "single-page-applications",
-      "angular",
       "JavaScript",
-      "scheduling-application"
+      "scheduling-application",
+      "saas",
+      "angular",
+      "single-page-applications"
     ],
     "date": "2025-05-21T20:55:40+00:00",
     "last_pushed": "2025-05-21T21:50:37+00:00",
@@ -153,9 +155,9 @@
     "url": "https://github.com/gonzabenitez/wapp-link-generator",
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
+      "HTML",
       "whatsapp",
       "generator",
-      "HTML",
       "link"
     ],
     "date": "2025-05-05T14:49:43+00:00",
@@ -181,9 +183,9 @@
     "url": "https://github.com/gonzabenitez/donkanagencia",
     "demo": "https://gonzabenitez.github.io/donkanagencia/",
     "tags": [
-      "website",
       "graphic-design",
-      "business"
+      "business",
+      "website"
     ],
     "date": "2025-05-21T20:18:47+00:00",
     "last_pushed": "2023-02-28T17:50:29+00:00",
