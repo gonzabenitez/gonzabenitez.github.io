@@ -1,5 +1,33 @@
 [
   {
+    "id": "gh-473805429",
+    "title": "Portfolio",
+    "description": "This is my main page! ",
+    "content": "\n---\n\n# \ud83c\udf0c Automated Portfolio Ecosystem\n\n### [gonzabenitez.github.io](https://gonzabenitez.github.io)\n\nThis is not just a portfolio\u2014it's a **self-maintaining data pipeline**. It uses GitHub as a headless CMS, Python as an automated curator, and Next.js as a high-performance presentation layer.\n\n## \ud83d\udee0\ufe0f System Overview\n\nThe ecosystem is divided into three specialized segments that interact via **GitHub Actions**:\n\n### 1. [The Data Engine (`/scripts`)](./scripts/README.md)\n\n* **Role**: Orchestrator & Curator.\n* **Tech**: Python + `uv` + PyGithub.\n* **Function**: Scans my GitHub profile, resolves live demos (Pages/CNAME), and calculates \"staleness\" to decide when to refresh project thumbnails via the Microlink API.\n\n### 2. [The State Layer (`/data` & `/assets`)](./assets/README.md)\n\n* **Role**: Permanent Storage.\n* **Tech**: Flat JSON + Local Image Assets.\n* **Function**: Acts as a local \"database\" to ensure the site remains blazing fast and doesn't hit API rate limits or external dependencies during page loads.\n\n### 3. [The Visual Interface (`/src`)](./src/README.md)\n\n* **Role**: Presentation & UX.\n* **Tech**: Next.js 15 (App Router) + Tailwind CSS + Framer Motion.\n* **Function**: Consumes the local JSON to render a responsive Bento Grid. Features activity-based sorting and a custom Plexus particle background.\n\n---\n\n## \ud83d\udd04 The Interaction Loop\n\n1. **Event**: A nightly cron job or a manual push triggers the `Sync Data` workflow.\n2. **Process**: The Python script updates `projects.json` and downloads new `thumb.png` files to `/assets`.\n3. **Commit**: GitHub Actions commits these changes back to the `master` branch.\n4. **React**: The `Deploy` workflow detects changes in `/data` or `/assets` and triggers a fresh Next.js static export.\n5. **Serve**: The updated site is pushed to GitHub Pages.\n\n---\n\n## \ud83d\ude80 Quick Start for Devs\n\n```bash\n# 1. Clone the stack\ngit clone https://github.com/gonzabenitez/gonzabenitez.github.io.git\n\n# 2. Run the automation (requires GITHUB_PAT)\nuv run scripts/sync-projects.py\n\n# 3. Launch the UI\ncd src\nnpm install && npm run dev\n\n```\n\n---\n\n## \ud83d\udcc8 Key Automation Features\n\n* **Smart Refresh**: Thumbnails are only re-captured if the repository `pushed_at` date is newer than the local asset.\n* **Force-Dark Design**: Hardcoded CSS variables to ensure visual consistency regardless of OS theme settings.\n* **Plexus Network**: A custom `Canvas` implementation in the Hero section symbolizing interconnected automated systems.\n\n---\n",
+    "thumbnail": "/assets/gonzabenitez.github.io/thumb.png",
+    "images": [
+      "/assets/gonzabenitez.github.io/screenshot00.png",
+      "/assets/gonzabenitez.github.io/screenshot01.png",
+      "/assets/gonzabenitez.github.io/screenshot02.png",
+      "/assets/gonzabenitez.github.io/screenshot03.png",
+      "/assets/gonzabenitez.github.io/screenshot04.png",
+      "/assets/gonzabenitez.github.io/screenshot05.png",
+      "/assets/gonzabenitez.github.io/thumb.png"
+    ],
+    "url": "https://github.com/gonzabenitez/gonzabenitez.github.io",
+    "demo": "https://gonzabenitez.github.io/",
+    "tags": [
+      "portfolio",
+      "featured",
+      "TypeScript"
+    ],
+    "date": "2022-03-24T23:32:37+00:00",
+    "last_pushed": "2026-03-01T02:26:27+00:00",
+    "source": "github",
+    "is_fork": false,
+    "is_featured": true
+  },
+  {
     "id": "gh-1167638293",
     "title": "Oldportfolio",
     "description": "The first (Angular-based) version of my automated portfolio frontend ",
@@ -24,34 +52,6 @@
     "source": "github",
     "is_fork": false,
     "is_featured": false
-  },
-  {
-    "id": "gh-473805429",
-    "title": "Portfolio",
-    "description": "This is my main page! ",
-    "content": "\n---\n\n# \ud83c\udf0c Automated Portfolio Ecosystem\n\n### [gonzabenitez.github.io](https://gonzabenitez.github.io)\n\nThis is not just a portfolio\u2014it's a **self-maintaining data pipeline**. It uses GitHub as a headless CMS, Python as an automated curator, and Next.js as a high-performance presentation layer.\n\n## \ud83d\udee0\ufe0f System Overview\n\nThe ecosystem is divided into three specialized segments that interact via **GitHub Actions**:\n\n### 1. [The Data Engine (`/scripts`)](./scripts/README.md)\n\n* **Role**: Orchestrator & Curator.\n* **Tech**: Python + `uv` + PyGithub.\n* **Function**: Scans my GitHub profile, resolves live demos (Pages/CNAME), and calculates \"staleness\" to decide when to refresh project thumbnails via the Microlink API.\n\n### 2. [The State Layer (`/data` & `/assets`)](./assets/README.md)\n\n* **Role**: Permanent Storage.\n* **Tech**: Flat JSON + Local Image Assets.\n* **Function**: Acts as a local \"database\" to ensure the site remains blazing fast and doesn't hit API rate limits or external dependencies during page loads.\n\n### 3. [The Visual Interface (`/src`)](./src/README.md)\n\n* **Role**: Presentation & UX.\n* **Tech**: Next.js 15 (App Router) + Tailwind CSS + Framer Motion.\n* **Function**: Consumes the local JSON to render a responsive Bento Grid. Features activity-based sorting and a custom Plexus particle background.\n\n---\n\n## \ud83d\udd04 The Interaction Loop\n\n1. **Event**: A nightly cron job or a manual push triggers the `Sync Data` workflow.\n2. **Process**: The Python script updates `projects.json` and downloads new `thumb.png` files to `/assets`.\n3. **Commit**: GitHub Actions commits these changes back to the `master` branch.\n4. **React**: The `Deploy` workflow detects changes in `/data` or `/assets` and triggers a fresh Next.js static export.\n5. **Serve**: The updated site is pushed to GitHub Pages.\n\n---\n\n## \ud83d\ude80 Quick Start for Devs\n\n```bash\n# 1. Clone the stack\ngit clone https://github.com/gonzabenitez/gonzabenitez.github.io.git\n\n# 2. Run the automation (requires GITHUB_PAT)\nuv run scripts/sync-projects.py\n\n# 3. Launch the UI\ncd src\nnpm install && npm run dev\n\n```\n\n---\n\n## \ud83d\udcc8 Key Automation Features\n\n* **Smart Refresh**: Thumbnails are only re-captured if the repository `pushed_at` date is newer than the local asset.\n* **Force-Dark Design**: Hardcoded CSS variables to ensure visual consistency regardless of OS theme settings.\n* **Plexus Network**: A custom `Canvas` implementation in the Hero section symbolizing interconnected automated systems.\n\n---\n",
-    "thumbnail": "/assets/gonzabenitez.github.io/thumb.png",
-    "images": [
-      "/assets/gonzabenitez.github.io/screenshot00.png",
-      "/assets/gonzabenitez.github.io/screenshot01.png",
-      "/assets/gonzabenitez.github.io/screenshot02.png",
-      "/assets/gonzabenitez.github.io/screenshot03.png",
-      "/assets/gonzabenitez.github.io/screenshot04.png",
-      "/assets/gonzabenitez.github.io/screenshot05.png",
-      "/assets/gonzabenitez.github.io/thumb.png"
-    ],
-    "url": "https://github.com/gonzabenitez/gonzabenitez.github.io",
-    "demo": "https://gonzabenitez.github.io/",
-    "tags": [
-      "portfolio",
-      "featured",
-      "TypeScript"
-    ],
-    "date": "2022-03-24T23:32:37+00:00",
-    "last_pushed": "2026-02-28T01:56:41+00:00",
-    "source": "github",
-    "is_fork": false,
-    "is_featured": true
   },
   {
     "id": "gh-1166819817",
@@ -128,9 +128,9 @@
     "tags": [
       "saas",
       "single-page-applications",
+      "angular",
       "JavaScript",
-      "scheduling-application",
-      "angular"
+      "scheduling-application"
     ],
     "date": "2025-05-21T20:55:40+00:00",
     "last_pushed": "2025-05-21T21:50:37+00:00",
@@ -153,10 +153,10 @@
     "url": "https://github.com/gonzabenitez/wapp-link-generator",
     "demo": "https://gonzabenitez.github.io/wapp-link-generator/",
     "tags": [
-      "link",
       "whatsapp",
       "generator",
-      "HTML"
+      "HTML",
+      "link"
     ],
     "date": "2025-05-05T14:49:43+00:00",
     "last_pushed": "2025-05-05T14:53:49+00:00",
@@ -181,9 +181,9 @@
     "url": "https://github.com/gonzabenitez/donkanagencia",
     "demo": "https://gonzabenitez.github.io/donkanagencia/",
     "tags": [
-      "business",
       "website",
-      "graphic-design"
+      "graphic-design",
+      "business"
     ],
     "date": "2025-05-21T20:18:47+00:00",
     "last_pushed": "2023-02-28T17:50:29+00:00",
