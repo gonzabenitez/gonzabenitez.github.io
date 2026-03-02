@@ -10,7 +10,7 @@
 import os
 import json
 import requests
-import datetime
+from datetime import datetime
 from github import Github, GithubException
 from dotenv import load_dotenv
 
